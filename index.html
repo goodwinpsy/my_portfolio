@@ -1,110 +1,306 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goodwin Michael | Clinical Psychologist | ReSolve Counselling</title>
+  
+  <!-- Fonts & Cal.com Embed Script -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Cal element-embed script -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ar);} else {p(cal, ar);} return; } p(cal, ar); }; let d = C.document; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://cal.com"});
+    Cal("ui", {"styles":{"branding":{"brandColor":"#38bdf8"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+
   <style>
     :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --text-main: #f8fafc;
+      --bg-color: #0b0f19;
+      --card-bg: #151c2c;
+      --card-border: #232d42;
+      --text-primary: #f8fafc;
       --text-muted: #94a3b8;
       --accent: #38bdf8;
-      --border-color: #334155;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --font-family: 'Plus Jakarta Sans', sans-serif;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; }
-    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
-    
-    /* Nav */
-    .navbar { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+    html { scroll-behavior: smooth; }
+    body { 
+      background-color: var(--bg-color); 
+      color: var(--text-primary); 
+      font-family: var(--font-family); 
+      line-height: 1.6;
+    }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Header / Navigation */
+    .navbar { 
+      position: sticky; top: 0; 
+      background: rgba(11, 15, 25, 0.85); 
+      backdrop-filter: blur(12px); 
+      border-bottom: 1px solid var(--card-border); 
+      z-index: 100; 
+      padding: 1.2rem 0;
+    }
     .nav-container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.2rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+    .logo { font-size: 1.15rem; font-weight: 700; color: var(--text-primary); text-decoration: none; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
     .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--accent); }
-    
-    /* Hero */
-    .hero { padding: 5rem 0 3rem 0; }
-    .badge { display: inline-block; background: rgba(56, 189, 248, 0.1); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.2); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; margin-bottom: 1rem; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
-    .hero h2 { color: var(--accent); font-weight: 500; font-size: 1.3rem; margin-bottom: 0.8rem; }
-    .hero .subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.2rem; }
-    .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin-bottom: 2rem; }
-    .btn { display: inline-block; background: var(--accent); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-    
+
+    /* Hero Section */
+    .hero { padding: 4.5rem 0 2.5rem 0; }
+    .badge-group { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .badge { 
+      display: inline-flex; align-items: center; gap: 0.4rem; 
+      background: var(--accent-glow); color: var(--accent); 
+      border: 1px solid rgba(56, 189, 248, 0.3); 
+      padding: 0.35rem 0.85rem; border-radius: 30px; 
+      font-size: 0.825rem; font-weight: 600; 
+    }
+    .hero h1 { font-size: 2.75rem; font-weight: 700; tracking: -0.03em; margin-bottom: 0.2rem; }
+    .hero h2 { font-size: 1.35rem; color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; }
+    .hero .credentials { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; margin-bottom: 1.5rem; }
+    .hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 720px; margin-bottom: 2rem; line-height: 1.7; }
+
+    /* Buttons & Actions */
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn { 
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; 
+      padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; 
+      font-weight: 600; font-size: 0.95rem; transition: all 0.2s ease; 
+    }
+    .btn-primary { background: var(--accent); color: #0b0f19; }
+    .btn-primary:hover { background: #7dd3fc; transform: translateY(-2px); }
+    .btn-secondary { background: var(--card-bg); color: var(--text-primary); border: 1px solid var(--card-border); }
+    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    /* Highlights Bar */
+    .highlights-bar { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 1.25rem; margin-bottom: 3rem; 
+    }
+    .highlight-card { 
+      background: var(--card-bg); border: 1px solid var(--card-border); 
+      padding: 1.25rem; border-radius: 10px; text-align: center; 
+    }
+    .highlight-card .number { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+    .highlight-card .label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
     /* Sections */
     .section { padding: 3rem 0; }
-    .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
-    
+    .section-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .section-subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+
     /* Cards Grid */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
-    .card h3 { color: var(--accent); margin-bottom: 0.5rem; }
-    .card p { color: var(--text-muted); font-size: 0.95rem; }
-    
-    /* Contact */
-    .contact-box { background: var(--card-bg); padding: 2rem; border-radius: 8px; text-align: center; border: 1px solid var(--border-color); }
-    .contact-info { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
-    .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
-    
-    footer { text-align: center; padding: 2rem 0; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); margin-top: 3rem; }
+    .card { 
+      background: var(--card-bg); border: 1px solid var(--card-border); 
+      padding: 1.75rem; border-radius: 12px; transition: border-color 0.2s, transform 0.2s; 
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .card h3 { font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .card .meta { color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+    /* Skills List */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .skill-item { background: var(--card-bg); border: 1px solid var(--card-border); padding: 1rem; border-radius: 8px; }
+    .skill-item h4 { color: var(--accent); font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .skill-item p { color: var(--text-muted); font-size: 0.85rem; }
+
+    /* Cal.com Booking Container */
+    .booking-container { 
+      background: var(--card-bg); border: 1px solid var(--card-border); 
+      border-radius: 12px; padding: 1rem; min-height: 600px; 
+    }
+
+    /* Contact Details Card */
+    .contact-card { 
+      background: var(--card-bg); border: 1px solid var(--card-border); 
+      border-radius: 12px; padding: 2rem; margin-top: 1rem; 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; 
+    }
+    .contact-item h4 { color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .contact-item a, .contact-item p { color: var(--text-primary); text-decoration: none; font-size: 1.05rem; font-weight: 500; }
+    .contact-item a:hover { color: var(--accent); }
+
+    footer { text-align: center; padding: 2.5rem 0; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--card-border); margin-top: 4rem; }
   </style>
 </head>
 <body>
 
+  <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">Goodwin Michael</a>
+      <a href="#" class="logo">Goodwin Michael <span>| Clinical Psychologist</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book Session</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero container" id="about">
-    <span class="badge">Clinical Psychologist</span>
+    <div class="badge-group">
+      <span class="badge">● RCI Registered Clinical Psychologist</span>
+      <span class="badge">● KSMHA Registered</span>
+    </div>
     <h1>Goodwin Michael</h1>
     <h2>ReSolve Counselling & Psychotherapy</h2>
-    <p>Providing evidence-based mental health care, structured psychological evaluations, and therapeutic support in a confidential, safe environment.</p>
-    <a href="#contact" class="btn">Book a Consultation</a>
+    <p class="credentials">PD. Clinical Psychology (RCI) | M.Sc. Applied Psychology | B.Sc. Psychology</p>
+    
+    <p>RCI & KSMHA registered compassionate Clinical Psychologist with extensive clinical experience in psychological assessment, therapeutic interventions, CBT, and counselling across diverse populations. Proficient in developing tailored treatment plans and evidence-based therapeutic techniques to support lasting mental health and well-being.</p>
+
+    <div class="hero-cta">
+      <a href="#booking" class="btn btn-primary">Schedule Appointment</a>
+      <a href="#contact" class="btn btn-secondary">Contact Clinic</a>
+    </div>
+
+    <!-- Qualifications & Registration Highlights -->
+    <div class="highlights-bar">
+      <div class="highlight-card">
+        <div class="number">RCI & KSMHA</div>
+        <div class="label">Licensed & Registered Practitioner</div>
+      </div>
+      <div class="highlight-card">
+        <div class="number">CBT & Evidence-Based</div>
+        <div class="label">Psychotherapeutic Approaches</div>
+      </div>
+      <div class="highlight-card">
+        <div class="number">Comprehensive</div>
+        <div class="label">Diagnostic & Psychological Testing</div>
+      </div>
+    </div>
   </section>
 
+  <!-- Clinical Experience Section -->
+  <section class="section container" id="experience">
+    <h2 class="section-title">Clinical Experience</h2>
+    <p class="section-subtitle">Professional experience across psychiatric OPDs, medical centres, and clinical institutions.</p>
+    
+    <div class="grid">
+      <div class="card">
+        <h3>Clinical Psychologist (RCI)</h3>
+        <div class="meta">Nirmala Medical Centre, Muvattupuzha | 2025 - Present</div>
+        <p>Managing patients in psychiatric OPD, conducting diagnostic evaluations, and delivering clinical therapeutics.</p>
+      </div>
+
+      <div class="card">
+        <h3>Trainee Clinical Psychologist (RCI)</h3>
+        <div class="meta">Gajra Raja Medical College, Gwalior | 2024 - 2025</div>
+        <p>Managed psychiatric OPD clinical cases, diagnostic testing, formulation, and structured psychotherapeutic interventions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Trainee Psychologist</h3>
+        <div class="meta">Amma Multispeciality Clinic, Perinthalmanna | 2022 - 2023</div>
+        <p>Clinical evaluation and therapeutic management for childhood disorders (SLD, ADHD), remedial training, daycare oversight, and adult cases.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Speciality Section -->
+  <section class="section container">
+    <h2 class="section-title">Core Competencies</h2>
+    <p class="section-subtitle">Specialized clinical skill set and assessment techniques.</p>
+    
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h4>Clinical Assessment</h4>
+        <p>Expert psychological evaluations using standardized test batteries and structured interviews.</p>
+      </div>
+      <div class="skill-item">
+        <h4>Diagnosis & Formulation</h4>
+        <p>Accurate diagnostic formulation of complex cognitive, developmental, and mood conditions.</p>
+      </div>
+      <div class="skill-item">
+        <h4>Therapeutic Techniques</h4>
+        <p>Cognitive Behavioral Therapy (CBT), supportive therapy, and evidence-based interventions.</p>
+      </div>
+      <div class="skill-item">
+        <h4>Developmental Testing</h4>
+        <p>Assessments for SLD, ADHD, IQ testing, social maturity, and learning disability remediation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
   <section class="section container" id="services">
-    <h2 class="section-title">Services Offered</h2>
+    <h2 class="section-title">Clinical Services Offered</h2>
+    <p class="section-subtitle">Tailored therapeutic interventions and evaluations for individuals and families.</p>
+    
     <div class="grid">
       <div class="card">
         <h3>Individual Psychotherapy</h3>
-        <p>Tailored therapy addressing anxiety, stress management, mood regulation, and personal challenges using structured clinical approaches.</p>
+        <p>Evidence-based CBT and structured therapy sessions targeting anxiety, mood disorders, stress management, and emotional well-being.</p>
       </div>
       <div class="card">
-        <h3>Psychological Assessments</h3>
-        <p>Comprehensive evaluations for developmental, cognitive, and social maturity profiling, paired with formal diagnostic reporting.</p>
+        <h3>Psychological & IQ Testing</h3>
+        <p>Comprehensive evaluations for cognitive, intellectual, developmental, and social maturity profiling with formal reporting.</p>
       </div>
       <div class="card">
-        <h3>Mental Health Outreach</h3>
-        <p>Psychoeducation, interactive workshops, and community-focused sessions aimed at promoting practical wellness strategies.</p>
+        <h3>Academic & SLD Counselling</h3>
+        <p>Specialized interventions for children and adolescents experiencing SLD, ADHD, academic difficulties, and learning challenges.</p>
       </div>
     </div>
   </section>
 
+  <!-- Cal.com Online Booking Section -->
+  <section class="section container" id="booking">
+    <h2 class="section-title">Book an Online or Clinic Consultation</h2>
+    <p class="section-subtitle">Select a convenient date and time directly through Cal.com below:</p>
+
+    <div class="booking-container">
+      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+      <script type="text/javascript">
+        Cal("inline", {
+          elementOrSelector: "#my-cal-inline",
+          calLink: "goodwinpsych",
+          layout: "month_view"
+        });
+      </script>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section class="section container" id="contact">
-    <h2 class="section-title">Schedule an Appointment</h2>
-    <div class="contact-box">
-      <p style="color: var(--text-muted);">For enquiries, diagnostic assessments, or session bookings, reach out directly:</p>
-      <div class="contact-info">
-        <a href="mailto:resolve.enquiry@gmail.com">resolve.enquiry@gmail.com</a>
-        <a href="tel:+918089406619">+91 8089406619</a>
+    <h2 class="section-title">Direct Contact</h2>
+    <p class="section-subtitle">For urgent enquiries, clinical referrals, or practice details:</p>
+
+    <div class="contact-card">
+      <div class="contact-item">
+        <h4>Practice Name</h4>
+        <p>ReSolve Counselling & Psychotherapy</p>
+      </div>
+      <div class="contact-item">
+        <h4>Phone Number</h4>
+        <a href="tel:+917306687052">+91 7306687052</a>
+      </div>
+      <div class="contact-item">
+        <h4>Email Address</h4>
+        <a href="mailto:m.goodwinpsy@gmail.com">m.goodwinpsy@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <h4>Location</h4>
+        <p>Ernakulam, Kerala</p>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2026 Goodwin Michael | ReSolve Counselling & Psychotherapy. All rights reserved.</p>
@@ -112,5 +308,4 @@
   </footer>
 
 </body>
-  </html>
-  
+</html>
