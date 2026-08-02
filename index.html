@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goodwin Michael | Clinical Psychologist | ReSolve Counselling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --border-color: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    
+    /* Nav */
+    .navbar { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--accent); }
+    
+    /* Hero */
+    .hero { padding: 5rem 0 3rem 0; }
+    .badge { display: inline-block; background: rgba(56, 189, 248, 0.1); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.2); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; margin-bottom: 1rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
+    .hero h2 { color: var(--accent); font-weight: 500; font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .hero .subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.2rem; }
+    .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin-bottom: 2rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    
+    /* Sections */
+    .section { padding: 3rem 0; }
+    .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+    
+    /* Cards Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+    .card h3 { color: var(--accent); margin-bottom: 0.5rem; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+    
+    /* Contact */
+    .contact-box { background: var(--card-bg); padding: 2rem; border-radius: 8px; text-align: center; border: 1px solid var(--border-color); }
+    .contact-info { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+    .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    
+    footer { text-align: center; padding: 2rem 0; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); margin-top: 3rem; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Goodwin Michael</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero container" id="about">
+    <span class="badge">Clinical Psychologist</span>
+    <h1>Goodwin Michael</h1>
+    <h2>ReSolve Counselling & Psychotherapy</h2>
+    <p>Providing evidence-based mental health care, structured psychological evaluations, and therapeutic support in a confidential, safe environment.</p>
+    <a href="#contact" class="btn">Book a Consultation</a>
+  </section>
+
+  <section class="section container" id="services">
+    <h2 class="section-title">Services Offered</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Individual Psychotherapy</h3>
+        <p>Tailored therapy addressing anxiety, stress management, mood regulation, and personal challenges using structured clinical approaches.</p>
+      </div>
+      <div class="card">
+        <h3>Psychological Assessments</h3>
+        <p>Comprehensive evaluations for developmental, cognitive, and social maturity profiling, paired with formal diagnostic reporting.</p>
+      </div>
+      <div class="card">
+        <h3>Mental Health Outreach</h3>
+        <p>Psychoeducation, interactive workshops, and community-focused sessions aimed at promoting practical wellness strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="contact">
+    <h2 class="section-title">Schedule an Appointment</h2>
+    <div class="contact-box">
+      <p style="color: var(--text-muted);">For enquiries, diagnostic assessments, or session bookings, reach out directly:</p>
+      <div class="contact-info">
+        <a href="mailto:resolve.enquiry@gmail.com">resolve.enquiry@gmail.com</a>
+        <a href="tel:+918089406619">+91 8089406619</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Goodwin Michael | ReSolve Counselling & Psychotherapy. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+  </html>
+  
